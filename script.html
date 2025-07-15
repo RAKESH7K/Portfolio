@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+        /* Custom scroll-padding-top for fixed header */
+        html {
+            scroll-padding-top: 80px; /* Adjust this value based on your header's height */
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md py-4 fixed top-0 w-full z-10 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+            <div class="text-2xl font-bold text-indigo-600 p-2 rounded-md">Rakesh k</div>
+            <ul class="flex space-x-4">
+                <li>
+                    <button onclick="scrollToSection('about')" class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-100">
+                        About
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('skills')" class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-100">
+                        Skills
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('projects')" class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-100">
+                        Projects
+                    </button>
+                </li>
+                <li>
+                    <button onclick="scrollToSection('contact')" class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-100">
+                        Contact
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content with padding for fixed header -->
+    <main class="pt-20">
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-b-lg shadow-xl mb-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="flex flex-col items-center">
+                    <!-- Profile Picture -->
+                    <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center overflow-hidden mb-6 shadow-lg">
+                        <!-- Replace the 'src' with your image URL -->
+                        <img
+                            src="mypicture.jpg"
+                            alt="Your Profile Picture"
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/128x128/E0E7FF/4338CA?text=Image+Error';"
+                        />
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Hi, I'm Rakesh k</h1>
+                    <p class="text-xl sm:text-2xl mb-8 max-w-2xl">
+                        Hey there! I'm Rakesh  — a postgrad in Electronics and Communication who loves bringing ideas to life with Python, clean code, and a dash of AI. I’m all about building smart, efficient solutions — whether it’s on screen or on circuits.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-3xl mb-8">
+                        Passionate MSc Electronics student with a strong foundation in hardware systems and a growing expertise in Python development. Actively exploring the fields of Artificial Intelligence, Machine Learning, and Robotics to bridge the gap between intelligent software and real-world applications. Skilled in developing efficient, scalable code and building smart systems that combine electronics with advanced algorithms. Eager to contribute to innovative tech-driven solutions and continue learning in dynamic environments.
+                    </p>
+                    <!-- Resume Button -->
+                    <a
+                        href="rakesh resume.pdf" target="_blank"
+                        class="inline-flex items-center px-6 py-3 bg-white text-indigo-600 text-lg font-medium rounded-md shadow-lg hover:bg-gray-100 transition-colors duration-200"
+                    >
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-white rounded-lg shadow-lg mx-4 sm:mx-6 lg:mx-8 mb-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-10">My Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Skill Card 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Front-End Development</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>HTML5, CSS, Javascript</li>
+                            <li>Bootstrap</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Back-End & AI ML</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Python for ML & Scripting</li>
+                            <li>C++, Arduino, Raspberry Pi</li>
+                            <li>Microcontrollers, PIC</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Tools & Practices</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li> GitHub, VScode</li>
+                            <li>MATLAB, Simulink</li>
+                            <li>Embedded Programing tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-gray-100 rounded-lg shadow-lg mx-4 sm:mx-6 lg:mx-8 mb-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-10">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+1"
+                            alt="Project 1 Thumbnail"
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/E0E7FF/4338CA?text=Image+Error';"
+                        />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Power Grid Optimization</h3>
+                            <p class="text-gray-700 text-sm mb-4">
+                                Developed a software tool to optimize load distribution, cost efficiency, and power management in electrical grids using PSO algorithm. The model uses predictive analytics to forecast demand and ensure efficient resource allocation in smart grids.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">HTML</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">CSS</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">pHp</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">MySQL</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Chart.js</span>
+                            </div>
+                            <a
+                                href="#" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition-colors duration-200"
+                            >
+                                View Project
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="https://placehold.co/600x400/FFE0E0/CA3838?text=Project+2"
+                            alt="Project 2 Thumbnail"
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE0E0/CA3838?text=Image+Error';"
+                        />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">AI Enhanced Image Compression</h3>
+                            <p class="text-gray-700 text-sm mb-4">
+                                Designed an intelligent image compression system that combines traditional Digital Signal Processing (DSP) techniques like DCT and Wavelet Transform with deep learning-based Autoencoders. The system significantly reduces image size while preserving visual quality, making it suitable for real-time and storage-sensitive applications.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Anaconda Promt</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Bootstrap(Tensorflow)</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Open CV</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">MySQL</span>
+                            </div>
+                            <a
+                                href="#" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition-colors duration-200"
+                            >
+                                View Project
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="https://placehold.co/600x400/E0FFEF/38CA7C?text=Project+3"
+                            alt="Project 3 Thumbnail"
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/E0FFEF/38CA7C?text=Image+Error';"
+                        />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">HI-TECH BUS</h3>
+                            <p class="text-gray-700 text-sm mb-4">
+                                This project proposes a smart bus system using RFID, GPS, and microcontrollers (Arduino Nano and NodeMCU) to automate fare collection and passenger tracking. It records entry/exit points, deducts fare, and updates travel data to a web server. The system enhances public transport by improving data accuracy, reducing cash handling, and offering real-time passenger information for a smoother commute.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Arduino Nano</span>
+                                <span class="bg-cyan-100 text-cyan-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NodeMCU</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">RFID</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Servo Motors</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">webserver</span>
+                            </div>
+                            <a
+                                href="#" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition-colors duration-200"
+                            >
+                                View Project
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white rounded-lg shadow-lg mx-4 sm:mx-6 lg:mx-8 mb-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-700 mb-10">Get in Touch</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <div class="flex flex-col items-center space-y-6">
+                    <a
+                        href="mailto:rakeshkrakesh07@gmail.com"
+                        class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white text-lg font-medium rounded-md shadow-lg hover:bg-indigo-700 transition-colors duration-200"
+                    >
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        rakeshkrakesh07@gmail.com
+                    </a>
+                    <div class="flex space-x-6">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/rakesh-k-76b06724a" target="_blank" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/RAKESH7K" target="_blank" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.49.998.108-.775.418-1.305.762-1.605-2.665-.3-5.464-1.332-5.464-5.93 0-1.31.465-2.38 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 016 0c2.293-1.552 3.3-1.23 3.3-1.23.653 1.656.24 2.876.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.8 5.62-5.475 5.92.43.37.823 1.102.823 2.222v3.293c0 .319.21.69.825.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12 rounded-t-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; <span id="current-year"></span> Rakesh. All rights reserved.</p>
+            <p class="mt-2">Built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Update active state for navigation buttons (optional, but good for UX)
+            updateActiveNavButton(sectionId);
+        }
+
+        // Function to update the active navigation button styling
+        function updateActiveNavButton(activeId) {
+            const buttons = document.querySelectorAll('header nav button');
+            buttons.forEach(button => {
+                const targetId = button.onclick.toString().match(/'([^']+)'/)[1]; // Extract sectionId from onclick
+                if (targetId === activeId) {
+                    button.classList.add('bg-indigo-600', 'text-white', 'shadow-lg');
+                    button.classList.remove('text-gray-700', 'hover:bg-gray-100');
+                } else {
+                    button.classList.remove('bg-indigo-600', 'text-white', 'shadow-lg');
+                    button.classList.add('text-gray-700', 'hover:bg-gray-100');
+                }
+            });
+        }
+
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Initial update of active nav button on page load (based on URL hash if any)
+        window.onload = () => {
+            const initialHash = window.location.hash.substring(1);
+            if (initialHash) {
+                scrollToSection(initialHash);
+            } else {
+                updateActiveNavButton('about'); // Default to 'about' if no hash
+            }
+        };
+
+        // Optional: Update active nav button on scroll
+        const sections = document.querySelectorAll('main section');
+        window.addEventListener('scroll', () => {
+            let current = 'about';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 90; // Adjust for fixed header
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.id;
+                }
+            });
+            updateActiveNavButton(current);
+        });
+    </script>
+</body>
+</html>
